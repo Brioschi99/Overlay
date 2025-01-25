@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overlay Futuristico Twitch</title>
+  <style>
+    /* Base */
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Contenitore principale dello stream */
+    .stream-area {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+    }
+
+    /* Zona Webcam */
+    .webcam {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 250px;
+      height: 200px;
+      border-radius: 15px;
+      overflow: hidden;
+      background: linear-gradient(45deg, #00ffcc, #0066ff);
+      border: 3px solid #00ffff;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .webcam:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 50px rgba(0, 255, 255, 1);
+    }
+
+    .webcam img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Nome canale */
+    .channel-name {
+      position: absolute;
+      top: 20px;
+      left: 300px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ccff;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+      max-width: 400px;
+    }
+
+    /* Barra follower */
+    .follower-bar {
+      position: absolute;
+      top: 80px;
+      left: 300px;
+      font-size: 20px;
+      color: #00ffff;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+
+    /* Barra donazione */
+    .donation-alert {
+      position: absolute;
+      top: 120px;
+      left: 300px;
+      font-size: 20px;
+      color: #ff00ff;
+      font-weight: bold;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff33cc;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    }
+
+    /* Animazione per i widget (ad esempio i follower o donazioni) */
+    .widget {
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="stream-area">
+    <!-- Zona Webcam -->
+    <div class="webcam">
+      <img src="webcam-placeholder.jpg" alt="Webcam">
+    </div>
+
+    <!-- Nome del Canale -->
+    <div class="channel-name">
+      <p>Nome del Canale</p>
+    </div>
+
+    <!-- Barra Follower -->
+    <div class="follower-bar">
+      <p>Followers: 500</p>
+    </div>
+
+    <!-- Avviso Donazione -->
+    <div class="donation-alert">
+      <p>Nuova Donazione: $5!</p>
+    </div>
+  </div>
+</body>
+</html>
