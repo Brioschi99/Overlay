@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BriskoXXIV - Canale Twitch</title>
+  <style>
+    /* Resetta gli stili di default */
+    body, h1, h2, p {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Layout base */
+    body {
+      background-color: #1e1e2f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Intestazione */
+    h1 {
+      font-size: 3rem;
+      color: #ff7f7f; /* Rosa pastello giapponese */
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #a2d2ff; /* Blu chiaro pastello */
+      margin-bottom: 15px;
+    }
+
+    /* Area di gioco e webcam */
+    .stream-area {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .game {
+      width: 80%;
+      max-width: 1200px;
+      height: 700px;
+      background-color: #444;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Webcam in alto a destra */
+    .webcam {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 200px;
+      height: 200px;
+      background-color: #444;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Pannello sociale */
+    .social-panel {
+      background-color: #333;
+      width: 80%;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .social-panel a {
+      color: #a2d2ff;
+      text-decoration: none;
+      margin: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* Styling per gli alert */
+    .alert {
+      background-color: #ff7f7f;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .alert.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>BriskoXXIV</h1>
+    <h2>Streaming in Diretta</h2>
+
+    <!-- Area di gioco e webcam -->
+    <div class="stream-area">
+      <div class="game">Gioco in corso...</div>
+      <div class="webcam">Webcam</div>
+    </div>
+
+    <!-- Pannello sociale -->
+    <div class="social-panel">
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
+    </div>
+
+    <!-- Alert per nuovi follower, iscrizioni, donazioni, ecc. -->
+    <div id="alert" class="alert">Nuovo Follow!</div>
+  </div>
+
+  <script>
+    // Simula un alert (puoi personalizzarlo per Twitch API o altre notifiche)
+    setTimeout(function() {
+      document.getElementById("alert").classList.add("show");
+      setTimeout(function() {
+        document.getElementById("alert").classList.remove("show");
+      }, 3000); // Mostra l'alert per 3 secondi
+    }, 5000); // Simula un alert dopo 5 secondi
+  </script>
+</body>
+</html>
